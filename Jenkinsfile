@@ -1,4 +1,4 @@
-properties([pipelineTriggers([pollSCM('* * * * *')])])
+properties([pipelineTriggers([pollSCM('*/30 * * * *')])])
 node {
     stage("first step"){
         git branch: 'main', url: 'https://github.com/wittydavid/MySoftware.git'
